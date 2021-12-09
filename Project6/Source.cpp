@@ -4,6 +4,9 @@
 #include "Parce.h"
 #include "PostDepartment.h"
 #include "Employee.h"
+#include "Manager.h"
+#include "Salary.h"
+#include "Test.h"
 using namespace std;
 double PriceWithDiscount(Department dep) {
     dep.discount = dep.price *0.25;
@@ -70,6 +73,7 @@ int main()
     }
     catch (const std::exception&)
     {
+        throw new exception();
         cerr << "Fatal error" << endl;
     }
     try
@@ -78,6 +82,7 @@ int main()
     }
     catch (const std::exception&)
     {
+        throw new exception();
         cout << "Error" << endl;
     }
     post.sendPost(*customer1);
@@ -87,6 +92,7 @@ int main()
     }
     catch (const std::exception&)
     {
+        throw new exception();
         cerr << "Fatal error" << endl;
     }
     post.price = post.setPrice(30, 40, 5);
@@ -144,5 +150,44 @@ int main()
     {
         cerr << "Fatal error" << endl;
     }
-   
+    // 3
+    Customer c;
+    c.price = 100;
+    cout << c.price;
+    c.price = 10;
+    c.deleteCustomer(10);
+    //2
+    Post ObjL(1, 2, 3), ObjB(10, 10, 10), ObjP;
+    ObjL.Show(1);
+    ObjB.Show(2);
+    ObjP = ObjL - ObjB; 
+    ObjP.Show(3); 
+    ObjP = ObjL + ObjB + ObjP; 
+    ObjP.Show(4);
+    ObjP = ObjL * ObjB;
+    ObjP.Show(5);
+    ObjP = ObjL = ObjB;
+    ObjP.Show(6);
+    ObjP = ObjL++;
+    ObjP = ++ObjL;
+    ObjP = ObjL--;
+    ObjP = --ObjL ;
+
+    Post postsIndex;
+    postsIndex[4] = 5;
+    cout <<"Post 4 has index "<< postsIndex[4]<<endl;
+    //5
+
+    Salary <int> mi; 
+    int m = 6500;
+    mi.delivererSalary(&m);
+    int dd;
+    dd = mi.managerSalary(200);
+    long int t;
+    t = mi.postmanSalary(mi.minSalary, 2);
+    Day<int, CountCustomers<int, int>> g;
+    CountCustomers<int, int> x(10,2);
+    int a = x.customers();
+    int b = x.days();
+    cout <<"Count of customers "<< a<<" for "<<b<<" days"<<endl;
 }

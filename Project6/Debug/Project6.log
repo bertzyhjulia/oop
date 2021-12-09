@@ -1,11 +1,6 @@
-﻿  ParceR.cpp
-C:\Users\Asus\source\repos\Project6\Project6\ParceR.cpp(7,26): warning C5043: 'Post::writeToFile': exception specification does not match previous declaration
-C:\Users\Asus\source\repos\Project6\Project6\Parce.h(26): message : see declaration of 'Post::writeToFile'
-  PostDepartmentR.cpp
-  Source.cpp
-C:\Users\Asus\source\repos\Project6\Project6\Source.cpp(9,30): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Asus\source\repos\Project6\Project6\Source.cpp(59,55): warning C4305: 'argument': truncation from '__int64' to 'int'
-C:\Users\Asus\source\repos\Project6\Project6\Source.cpp(59,43): warning C4309: 'argument': truncation of constant value
-C:\Users\Asus\source\repos\Project6\Project6\Source.cpp(99,55): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-  Generating Code...
-  Project6.vcxproj -> C:\Users\Asus\source\repos\Project6\Debug\Project6.exe
+﻿  Source.cpp
+D:\TelegramDocs\Project6\Project6\Project6\Source.cpp(12,30): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\TelegramDocs\Project6\Project6\Project6\Source.cpp(62,55): warning C4305: 'argument': truncation from '__int64' to 'int'
+D:\TelegramDocs\Project6\Project6\Project6\Source.cpp(62,43): warning C4309: 'argument': truncation of constant value
+D:\TelegramDocs\Project6\Project6\Project6\Source.cpp(105,55): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Project6.vcxproj -> D:\TelegramDocs\Project6\Project6\Debug\Project6.exe

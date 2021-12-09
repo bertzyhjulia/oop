@@ -10,14 +10,50 @@ private:
 	int weight;
 	int height;
 	int orderNumber;
+	int box;
+	int leter;
+	int packet;
+	int postsIndex[10];
+	int post;
 public:
-	
-	void count() throw() {
+
+	Post() { box = leter = packet = 0; };
+	Post(int c, int d, int f) { box = c; leter = d; packet = f; };
+	Post& operator ++() {
+		++post; return *this;
+	};
+	Post& operator--() {
+		--post; return *this;
+	};
+	Post& operator ++(int) {
+		post++; return *this;
+	};
+	Post& operator--(int) {
+		post--; return *this;
+	};
+	Post operator+(Post obj); 
+	Post operator-(Post obj);
+	Post operator*(Post obj);
+	Post operator=(Post obj); 
+	Post operator+=(Post obj); 
+	Post operator-=(Post obj); 
+	int& operator[] (const int index);
+	template <typename T>
+	const T& maxConst(const T& a, const T& b, const T& c)
+	{
+		if ((a > b) && (a > c))
+			return a;
+		else if ((b > a) && (b > c))
+			return b;
+		else return c;
+	}
+	void Show(int s);
+	 void count() throw() { 
 		static int countOfPosts[10];
 		++countOfPosts[10];
 		cout << "Count of posts " << countOfPosts << endl;
 	}
-	Post() {};
+	
 	Post(int money) {};
 	int price;
 	int width;
